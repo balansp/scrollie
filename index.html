@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Kary JS</title>
+        <script src="kary.js"></script>
+    </head>
+    
+    <body>
+        <div id="doc" class="document">
+            <div style="height:300px"></div>
+        </div>
+        <input type="button" value="ScrollUp" onclick="scrollUp()" id="button"/>
+        <input type="button" value="ScrollDown" onclick="scrollDown()" id="button"/>
+        
+        <script>
+        		$k("doc");
+            function scrollUp(Event){
+                $k("doc").scrollUpAllTheWay();
+            }
+             function scrollDown(Event){
+                $k("doc").scrollDownAllTheWay();
+            }
+        </script>
+    </body>
+    
+    <style>
+        .document{
+            height:500px;
+            width:500px;
+            background: cyan;
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+        
+    </style>
+</html>
